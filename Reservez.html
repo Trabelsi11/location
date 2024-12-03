@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_phone.css">
+    <link href="img/logo.jpg" rel="icon">
+ <style>
+    .voiture {
+                                    position: relative;
+                                    margin-top: 10px;
+    }
+    .vt{
+        display: none;
+    }
+    .vt:checked+label{
+        position: relative;
+        background-color:red;
+        border-left:red 2px solid ;
+        width: 306px;
+        height: 153px;
+    animation: logoo 5s infinite;
+                }
+                
+                @keyframes logoo {
+                    25% {
+                        opacity: .1;
+                
+                    }
+                
+                    50% {
+                        opacity: .25;
+                    }
+                
+                    75% {
+                        opacity: .50;
+                    }
+                
+                    100% {
+                        opacity: 1;
+                    }
+                
+                }
+   
+    </style>
+               
+    <script>
+                function verife(){
+                   var cin = document.getElementById("cin").value;
+                   var tel = document.getElementById("tel").value;
+                   var nom= document.getElementById("nom").value;
+                   var pre= document.getElementById("pre").value;
+                   var age= document.getElementById("age").value;
+                   var prage= document.getElementById("prage").value;
+                   if(cin.length!=8){
+                    alert("cin et incorect");
+                   }
+                   if(tel.length!=8){
+                    alert("nemero de telephone et incorecter" );
+                   }
+                   if(nom==""){
+                    alert("verifier votre nom");
+                   }
+                   if(pre==""){
+                    alert("verifier votre prenom");
+                   }
+                   if(age==""){
+                    alert("verifier votre age");
+                   }
+                   if(prage==""){
+                    alert("verifier votre age de votre pairme");
+                   }
+                }
+      
+    </script>
+ 
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/logo.jpg">
+        <div class="mi">
+            <input type="checkbox" id="menu">
+            <label for="menu" id="menu2"><img src="img/min.png" width="50px"></label>
+            <nav>
+                <ul>
+                    <a href="index.html">
+                        <li>Accueil</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="voiture.html">
+                        <li>Voitures</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="service.html">
+                        <li>Services</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="agences.htm">
+                        <li>Agences</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="a-propos.html">
+                        <li>A_propos</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <center>
+       <section>
+        <fieldset class="fieldset">
+            <legend class="legend">Inscription</legend>
+            <form name="f" method="post" action="https://formsubmit.co/atefroihme1234@gmail.com" onsubmit="verife()" >
+                <table border="0" height="300px">
+                   
+                    <tr>
+                        <td class="label">Debut</td>
+                        <td class="label">Fin</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="debut" class="debut" id="debut"></td>
+                    <td><input type="date" name="fin" class="fin" id="fin"></td>
+                    </tr>
+                  
+                    <tr>
+                        <td class="label">Nom</td>
+                        <td class="label">Prénom</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="nom" id="nom" required></td>
+                        <td><input type="text" name="Prénom" id="Prénom" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Cin</td>
+                        <td class="label">téléphone</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="cin" id="cin" required></td>
+                        <td><input type="number" name="téléphone" id="téléphone" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label">votre age</td>
+                        <td class="label">age du votre permis</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="son age" id=" son age"required></td>
+                        <td><input type="number" name="age du son permis" id="age du son permis"required></td>
+                    </tr>
+                </table>
+                <div class="imgg">
+                    <a href="https://wa.me//21627302374"><img class="WhatsApp" src="img/whatsapp.png"></a>
+                </div>
+                <h1>choisir votre voiture</h1>
+     <input type="radio" class="vt" name="voiteure" id="sk" value="skoda fabia">
+    <label for="sk"><img class="voiture" src="img/v1.jpg"></label>
+    <br>
+   <input type="radio" class="vt" name="voiteure" id="log" value="dacia logan">  
+   <label for="log"> <img class="voiture" src="img/vo2.jpg"></label>
+        <br>
+    <input type="radio" class="vt" name="voiteure" id="rio" value="kia rio">    
+    <label for="rio"><img class="voiture" src="img/vo3.jpg"></label>
+    <br>
+           <input type="radio" class="vt" name="voiteure" id="pic" value="kia picanto">
+               <label for="pic"><img class="voiture" src="img/vo4.jpg"></label>
+               <br>
+              <input type="radio"class="vt" name="voiteure" id="stp" value="dacia stepway">
+                  <label for="stp"><img class="voiture" src="img/vo5.jpg"></label>
+                  <br>
+               <input type="radio" class="vt" name="voiteure" id="vir" value="virtus">
+                    <label for="vir"> <img class="voiture" src="img/vo6.jpg"></label>
+                     <br>
+                        
+                        <input type="radio" class="vt" name="voiteure" id="swi" value="swift">
+                        <label for="swi"> <img class="voiture" src="img/vo7.png"></label>
+                        <br>
+                        <h3 class="nb">Nous vous recontacterons dès que nous recevrons les informations</h3>
+            
+        <input type="submit"  name="confirme" id="sub" value="Confirmer" class="rechercher">
+        </form>
+        </fieldset>
+</section>
+</center>
+ 
+    <footer>
+          <p class="p">Suivez nous</p>
+        <img src="img/fac.png" width="20px">
+        <img src="img/inst.png" width="20px">
+        <img src="img/gmail.png" width="20px">
+        <p class="p2">created by Wael Trabelsi</p>
+    </footer>
+    </body>
+    </html>
+   
